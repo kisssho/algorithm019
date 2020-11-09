@@ -11,25 +11,33 @@ delete | o(1)
 
 当然，也可能出现两个存储的数据通过映射函数获得的值相同的情况，换句话说，它们映射到相同的数组位置上了，这个叫做哈希碰撞，这种情况一般会在这个位置接入一个链表，将多个数据存储到链表中。如何哈希表设计的不得当，就可能出现一个位置有很多值的情况。所以哈希表的最坏时间复杂度是o(n)
 
->  java code
-hashmap:key,value键值对，key不重复
-&emsp;new HashMap()/new TreeMap()
-&emsp;map.set(key,value)
-&emsp;map.get(key)
-&emsp;map.has(key)
-&emsp;map.size()
-&emsp;map.clear()
+```javascript
+ java code
+	hashmap:key,value键值对，key不重复
 
+	new HashMap()/new TreeMap()
+	map.set(key,value)
+	map.get(key)
+	map.has(key)
+	map.size()
+	map.clear()
+   
+```
 
-> hashset:value ，不重复
-&emsp;set.add(value)
-&emsp;set.delete(value)
-&emsp;set.hash(value)
-&emsp;python
+```javascript
 
-> map:字典
-&emsp;set:{'ffsdaf','fas','asfd'}
+hashset:value ，不重复
+	set.add(value)
+	set.delete(value)
+	set.hash(value)
+	python
 
+```
+
+```javascript
+map:字典
+	set:{'ffsdaf','fas','asfd'}
+```
 
 
 <br>
@@ -41,21 +49,23 @@ hashmap:key,value键值对，key不重复
 
 树可以用于表示不同状态空间的状态的扩散。
 
-> 代码实现(python code)： 
-> class TreeNode:
-> &emsp;def __init__(self,val):
-	> &emsp;&emsp;self.root = val
-	> &emsp;&emsp;self.left = None
-	> &emsp;&emsp;self.right = None
+```javascript
+代码实现(python code)：
 
-
-> 前序遍历（中序、后序同理）：
-> def preorder(self,root):
-	> &emsp;if root:
-		> &emsp;&emsp;self.traverse_path = root.val
-		> &emsp;&emsp;self.preorder(root.left)
-		> &emsp;&emsp;self.preorder(root.right)
-		
+class TreeNode:
+	def __init__(self,val):
+		self.root = val
+		self.left = None
+		self.right = None
+```
+```javascript
+ 前序遍历（中序、后序同理）：
+def preorder(self,root):
+	if root:
+		self.traverse_path = root.val
+		self.preorder(root.left)
+		self.preorder(root.right)
+```
 
 
 
