@@ -11,28 +11,28 @@ delete | o(1)
 
 当然，也可能出现两个存储的数据通过映射函数获得的值相同的情况，换句话说，它们映射到相同的数组位置上了，这个叫做哈希碰撞，这种情况一般会在这个位置接入一个链表，将多个数据存储到链表中。如何哈希表设计的不得当，就可能出现一个位置有很多值的情况。所以哈希表的最坏时间复杂度是o(n)
 
->  java code&nbsp;
-hashmap:key,value键值对，key不重复&nbsp;
-&emsp;new HashMap()/new TreeMap()&nbsp;
-&emsp;map.set(key,value)&nbsp;
-&emsp;map.get(key)&nbsp;
-&emsp;map.has(key)&nbsp;
-&emsp;map.size()&nbsp;
-&emsp;map.clear()&nbsp;
+>  java code
+hashmap:key,value键值对，key不重复
+&emsp;new HashMap()/new TreeMap()
+&emsp;map.set(key,value)
+&emsp;map.get(key)
+&emsp;map.has(key)
+&emsp;map.size()
+&emsp;map.clear()
 
 
-> hashset:value ，不重复&nbsp;
-&emsp;set.add(value)&nbsp;
-&emsp;set.delete(value)&nbsp;
-&emsp;set.hash(value)&nbsp;
-&emsp;python&nbsp;
+> hashset:value ，不重复
+&emsp;set.add(value)
+&emsp;set.delete(value)
+&emsp;set.hash(value)
+&emsp;python
 
-> map:字典&nbsp;
-&emsp;set:{'ffsdaf','fas','asfd'}&nbsp;
+> map:字典
+&emsp;set:{'ffsdaf','fas','asfd'}
 
 
 
-<br><br>
+<br>
 
 # 二、树、二叉树、二叉搜索树的实现和特性
 
@@ -41,20 +41,20 @@ hashmap:key,value键值对，key不重复&nbsp;
 
 树可以用于表示不同状态空间的状态的扩散。
 
-> 代码实现(python code)： &nbsp;
-class TreeNode:&nbsp;
-&emsp;def __init__(self,val):&nbsp;
-	&emsp;&emsp;self.root = val&nbsp;
-	&emsp;&emsp;self.left = None&nbsp;
-	&emsp;&emsp;self.right = None&nbsp;
+> 代码实现(python code)： 
+> class TreeNode:
+> &emsp;def __init__(self,val):
+	> &emsp;&emsp;self.root = val
+	> &emsp;&emsp;self.left = None
+	> &emsp;&emsp;self.right = None
 
 
-> 前序遍历（中序、后序同理）：&nbsp;
-def preorder(self,root):&nbsp;
-	&emsp;if root:&nbsp;
-		&emsp;&emsp;self.traverse_path = root.val&nbsp;
-		&emsp;&emsp;self.preorder(root.left)&nbsp;
-		&emsp;&emsp;self.preorder(root.right)&nbsp;
+> 前序遍历（中序、后序同理）：
+> def preorder(self,root):
+	> &emsp;if root:
+		> &emsp;&emsp;self.traverse_path = root.val
+		> &emsp;&emsp;self.preorder(root.left)
+		> &emsp;&emsp;self.preorder(root.right)
 		
 
 
@@ -67,7 +67,7 @@ def preorder(self,root):&nbsp;
 
 
 为什么树的面试题解法一般都是递归？
-<br><br>
+<br>
 
 
 # 三、堆和二叉堆的实现和特性
@@ -92,7 +92,7 @@ insert(create) | o(logn) or o(1)
 二叉堆的插入操作：插入只能插到叶子节点左边的一个元素上，不能打破完全二叉树，并且如果它的根节点比它小，那么就和根节点替换，一次类推，直到整个堆的根节点都大于它的子节点。
 
 二叉堆的删除最大操作：删除最顶部的值，然后找到叶子最后一个节点放到顶部位置，再跟它的左右孩子比，跟最大的那个替换位置，重复直到整个堆根节点都大于它的叶子节点
-<br><br>
+<br>
 
 
 # 四、图的实现和特性
